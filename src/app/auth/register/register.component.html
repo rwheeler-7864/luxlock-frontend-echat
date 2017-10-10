@@ -1,0 +1,88 @@
+<div id="register-container">
+  <div class="header-background-circle"></div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="welcome-box">
+        <div class="welcome-text">Welcome to</div>
+        <div class="store-name">{{ storeName }}</div>
+        <div class="welcome-text">Featuring</div>
+        <div class="luxlock-logo"><img src="assets/images/logo.png"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <hr class="small-divider">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 welcome-container">
+      <div class="welcome">Meet your dedicated personal shopper. Let's shop!</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 auth-navigation-container">
+      <div class="auth-navigation">
+        <div class="auth-list-item"><a routerLink="/login">Login</a></div>
+        <div class="auth-list-item active"><a routerLink="/register">Register</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="register-form-container">
+        <form class="register-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required="required"
+              [(ngModel)]="name" #name_field="ngModel">
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required="required"
+              [(ngModel)]="email" #email_field="ngModel">
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required="required"
+              [(ngModel)]="password" #password_field="ngModel">
+          </div>
+
+          <button class="btn btn-primary register-button" type="button" (click)="register()">
+            <i class="fa fa-lock"></i>
+            Unlock Luxury
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="tos-container">
+        By pressing the sign in button you are joining LUXLOCK and agree to their Terms of Membership and Privacy Laws.
+      </div>
+    </div>
+  </div>
+
+</div>

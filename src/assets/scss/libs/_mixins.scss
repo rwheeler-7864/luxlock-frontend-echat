@@ -1,0 +1,26 @@
+// Cross browser Background linear gradient
+@mixin background-gradiant($gradient-start, $gradient-end) {
+  background: $gradient-start; /* Old browsers */
+  background: -moz-linear-gradient(top, $gradient-start 0%, $gradient-end 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $gradient-start 0%, $gradient-end 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $gradient-start 0%, $gradient-end 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$gradient-start, endColorstr=$gradient-end,GradientType=0 ); /* IE6-9 */
+}
+
+// Cross browser transition
+@mixin transition($time: 0.4 default, $second: s) {
+  -webkit-transition: all $time+$second ease;
+  -moz-transition: all $time+$second ease;
+  -ms-transition: all $time+$second ease;
+  -o-transition: all $time+$second ease;
+  transition: all $time+$second ease;
+}
+
+// Cross browser transform
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform:    $transforms;
+  -ms-transform:     $transforms;
+  -o-transform:      $transforms;
+  transform:         $transforms;
+}

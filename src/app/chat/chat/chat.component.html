@@ -1,0 +1,69 @@
+<a *ngIf="showLogoutLink" (click)="logout()" id="logout-link">Logout</a>
+<div id="chat-container">
+
+  <div class="header-background-circle"></div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="head-drop">
+        <div class="icon-stylist"><img src="http://placehold.it/60x60"></div>
+        <div class="choose-stylist">Choose Stylist</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="chat">
+        <div class="message-container" *ngFor="let msg of messages; trackBy: trackByMessages">
+          <!-- Received msg -->
+          <div class="message received " *ngIf="msg.type == 'R'">
+            <div class="avatar"><img src="{{msg.avatar}}"></div>
+            <div class="msg-body received">{{ msg.body }}</div>
+          </div>
+
+          <!-- Sent msg -->
+          <div class="message sent" *ngIf="msg.type == 'S'">
+            <div class="msg-body sent">{{ msg.body }}</div>
+            <div class="avatar"><img src="{{msg.avatar}}"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="chat-actions">
+        <div class="chat-menu-container">
+          <ul class="chat-menu-items">
+            <li class="chat-menu-item">
+              <div class="icon-container"><i class="fa fa-envelope-o"></i></div>
+              <div>Message</div>
+            </li>
+            <li class="chat-menu-item">
+              <div class="icon-container"><i class="fa fa-phone"></i></div>
+              <div>Call</div>
+            </li>
+            <li class="chat-menu-item">
+              <div class="icon-container"><i class="fa fa-map"></i></div>
+              <div>My Closet</div>
+            </li>
+            <li class="chat-menu-item">
+              <div class="icon-container"><i class="fa fa-map-marker"></i></div>
+              <div>Store Locator</div>
+            </li>
+          </ul>
+        </div>
+        <div class="chat-field-container">
+          <input type="text"
+                 id="new-message"
+                 placeholder="Type a message"
+                 [(ngModel)]="newMessage"
+                 (keyup.enter)="sendMessage()">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

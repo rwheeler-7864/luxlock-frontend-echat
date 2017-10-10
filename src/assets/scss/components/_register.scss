@@ -1,0 +1,150 @@
+#register-container {
+  @include background-gradiant($body-gradient-start, $body-gradient-end);
+  overflow-x: hidden;
+  height: 100%; /* Old browsers */
+  height: 100vh;
+  position: relative;
+
+  .header-background-circle {
+    top: -500px;
+  }
+
+  .welcome-box {
+    margin-top: 120px;
+    text-align: center;
+
+    .welcome-text {
+      font-size: 1.1em;
+      color: #999;
+      margin: 10px auto;
+    }
+
+    .store-name {
+      color: #eee;
+      font-size: 1.7em;
+    }
+
+    .luxlock-logo {
+      margin-top: 25px;
+    }
+  }
+
+  .small-divider {
+    width: 40px;
+    margin: 20px auto;
+  }
+
+  .welcome-container {
+    color: #999;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+
+    .welcome {
+      width: 220px;
+      margin: auto;
+    }
+
+    .new-black {
+      margin: auto;
+      font-style: italic;
+      width: 220px;
+    }
+  }
+
+  .auth-navigation-container {
+    margin-top: 35px;
+
+    .auth-navigation {
+      border: 2px solid #333;
+      border-radius: 19px;
+      height: 40px;
+      margin: auto;
+      padding: 2px;
+      width: 240px;
+
+      .auth-list-item {
+        border-radius: 17px;
+        float: left;
+        line-height: 2.5;
+        text-align: center;
+        text-transform: uppercase;
+        width: 50%;
+        height: 100%;
+
+        &.active {
+          background: #121212;
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.22);
+
+          a {
+            color: #999;
+            text-decoration: none;
+          }
+        }
+
+        a {
+          color: #5d5d5e;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .register-form-container {
+    margin-top: 30px;
+    text-align: center;
+
+    .register-form {
+      width: 305px;
+      margin: auto;
+
+      .form-group {
+        input {
+          background: #2f2f31;
+          border: none;
+          border-radius: 7px;
+          box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+          color: #999;
+          height: 45px;
+        }
+      }
+
+      .register-button {
+        background: #eee;
+        border-radius: 30px;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.22);
+        color: #333;
+        font-size: 1.1em;
+        line-height: 2.5;
+        margin-top: 35px;
+        text-transform: uppercase;
+        width: 220px;
+
+        .fa {
+          font-size: 1.7em;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  .forget-password-container {
+    margin-top: 35px;
+    text-align: center;
+
+    .forget-password {
+      font-size: 1.2em;
+      color: #666;
+    }
+  }
+
+  .tos-container {
+    color: #666;
+    font-size: 0.8em;
+    line-height: 1.6;
+    margin: 35px auto 0 auto;
+    text-align: center;
+    width: 260px;
+  }
+}

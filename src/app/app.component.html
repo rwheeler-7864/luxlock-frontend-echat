@@ -1,0 +1,23 @@
+<!--
+<a routerLink="/signin">Sign In</a>
+<a routerLink="/signup">Sign Up</a>
+-->
+
+
+<div class="app" [class.closed]="appClose">
+  <div class="app-handle" (click)="appClose = !appClose">
+    <div class="text before">VIP ACCESS</div>
+    <div class="handle-logo">
+      <img src="http://placehold.it/72x72">
+    </div>
+    <div class="text after">SHOPPING ASSISTANT</div>
+  </div>
+  <div class="main-app">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!--
+<app-ll-chat></app-ll-chat>
+<router-outlet></router-outlet>
+-->
